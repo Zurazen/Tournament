@@ -518,6 +518,8 @@ background:#101010;
 border:1px solid rgba(255,204,0,.25);
 
 border-radius:12px;
+
+position:relative; /* TAMBAH INI */
 }
 .match span{
 
