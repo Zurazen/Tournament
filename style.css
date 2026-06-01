@@ -611,10 +611,10 @@ position:relative;
 
 /* QUARTER FINAL CONNECTOR */
 
-.quarter .match:nth-child(1)::after,
-.quarter .match:nth-child(3)::after,
-.quarter .match:nth-child(5)::after,
-.quarter .match:nth-child(7)::after{
+.quarter .match:nth-of-type(1)::after,
+.quarter .match:nth-of-type(3)::after,
+.quarter .match:nth-of-type(5)::after,
+.quarter .match:nth-of-type(7)::after{
 
 content:"";
 
