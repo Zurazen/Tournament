@@ -471,12 +471,15 @@ margin-bottom:10px;
 display:grid;
 
 grid-template-columns:
-220px
-220px
-220px
-220px;
+260px
+260px
+260px
+260px;
 
-gap:45px;
+gap:60px;
+
+align-items:center;
+justify-content:center;
 }
 
 .round{
@@ -498,7 +501,7 @@ color:#ffcc00;
 /* MATCH */
 
 .match{
-width:220px;
+width:260px;
 height:70px;
 
 display:flex;
