@@ -489,3 +489,50 @@ width:100%;
 max-width:350px;
 }
 }
+
+/* SCROLL ANIMATION */
+
+.hidden{
+opacity:0;
+transform:translateY(40px);
+transition:all .8s ease;
+}
+
+.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* ACTIVE MENU */
+
+.navbar a.active{
+color:#ffd700;
+}
+
+/* PARTICLES */
+
+.particle{
+position:fixed;
+width:6px;
+height:6px;
+background:#ffd700;
+border-radius:50%;
+pointer-events:none;
+z-index:1;
+animation:floatUp linear forwards;
+box-shadow:0 0 10px #ffd700;
+}
+
+@keyframes floatUp{
+
+from{
+transform:translateY(100vh);
+opacity:1;
+}
+
+to{
+transform:translateY(-100px);
+opacity:0;
+}
+
+}
