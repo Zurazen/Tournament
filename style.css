@@ -609,31 +609,22 @@ position:relative;
 
 /* Phoenix vs Dragon */
 
-.quarter .match:nth-child(1)::after{
+/* QUARTER FINAL CONNECTOR */
+
+.quarter .match:nth-child(1)::after,
+.quarter .match:nth-child(3)::after,
+.quarter .match:nth-child(5)::after,
+.quarter .match:nth-child(7)::after{
+
 content:"";
+
 position:absolute;
 
-right:-100px;
+right:-105px;
 top:50%;
 
-width:100px;
-height:10px;
-
-background:red;
-
-transform:translateY(-50%);
-}
-
-/* Inferno vs Thunder */
-
-.quarter .match:nth-child(5)::after{
-content:"";
-position:absolute;
-right:-80px;
-top:50%;
-
-width:80px;
-height:120px;
+width:105px;
+height:140px;
 
 border-top:4px solid #ffcc00;
 border-right:4px solid #ffcc00;
@@ -644,6 +635,33 @@ border-radius:0 18px 18px 0;
 transform:translateY(-50%);
 }
 
+/* Inferno vs Thunder */
+
+/* QUARTER FINAL CONNECTOR */
+
+.quarter .match:nth-child(1)::after,
+.quarter .match:nth-child(3)::after,
+.quarter .match:nth-child(5)::after,
+.quarter .match:nth-child(7)::after{
+
+content:"";
+
+position:absolute;
+
+right:-105px;
+top:50%;
+
+width:105px;
+height:140px;
+
+border-top:4px solid #ffcc00;
+border-right:4px solid #ffcc00;
+border-bottom:4px solid #ffcc00;
+
+border-radius:0 18px 18px 0;
+
+transform:translateY(-50%);
+}
 
 
 /* ========================= */
