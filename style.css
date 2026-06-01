@@ -611,20 +611,20 @@ position:relative;
 
 /* QUARTER FINAL CONNECTOR */
 
-.quarter .match:nth-of-type(1)::after,
-.quarter .match:nth-of-type(3)::after,
-.quarter .match:nth-of-type(5)::after,
-.quarter .match:nth-of-type(7)::after{
+.quarter > .match:nth-of-type(1)::after,
+.quarter > .match:nth-of-type(3)::after,
+.quarter > .match:nth-of-type(5)::after,
+.quarter > .match:nth-of-type(7)::after{
 
 content:"";
 
 position:absolute;
 
-right:-105px;
+right:-80px;
 top:50%;
 
-width:105px;
-height:140px;
+width:80px;
+height:120px;
 
 border-top:4px solid #ffcc00;
 border-right:4px solid #ffcc00;
