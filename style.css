@@ -491,10 +491,28 @@ gap:10px;
 
 .round h3{
 
+.round h3{
+
 text-align:center;
 margin-bottom:30px;
 
 color:#ffcc00;
+
+}
+
+.quarter h3,
+.semi h3,
+.final h3{
+
+display:block;
+text-align:center;
+
+margin-bottom:30px;
+
+color:#ffcc00;
+
+font-size:2rem;
+font-weight:700;
 
 }
 
