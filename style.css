@@ -599,42 +599,6 @@ position:relative;
 
 }
 
-.quarter .match:nth-child(1)::after,
-.quarter .match:nth-child(5)::after{
-content:"";
-position:absolute;
-right:-60px;
-top:50%;
-
-width:60px;
-height:140px;
-
-border-top:3px solid #ffcc00;
-border-right:3px solid #ffcc00;
-border-bottom:3px solid #ffcc00;
-
-transform:translateY(-50%);
-border-radius:0 15px 15px 0;
-}
-
-.quarter .match:nth-child(3)::after,
-.quarter .match:nth-child(7)::after{
-content:"";
-position:absolute;
-right:-60px;
-top:50%;
-
-width:60px;
-height:140px;
-
-border-top:3px solid #ffcc00;
-border-right:3px solid #ffcc00;
-border-bottom:3px solid #ffcc00;
-
-transform:translateY(-50%);
-border-radius:0 15px 15px 0;
-}
-
 /* ========================= */
 /* CONNECTOR SF -> FINAL */
 /* ========================= */
