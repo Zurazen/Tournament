@@ -477,8 +477,8 @@ grid-template-columns:
 220px
 220px;
 
-gap:50px;
-
+gap:80px;
+align-items:center;
 justify-content:center;
 
 }
@@ -505,11 +505,15 @@ color:#ffcc00;
 
 .match{
 width:180px;
-height:70px;
+height:55px;
 line-height:55px;
 font-size:.9rem;
 
 padding:0 15px;
+  display:flex;
+justify-content:space-between;
+align-items:center;
+
 }
 
 .match span{
@@ -568,11 +572,13 @@ justify-content:center;
 }
 
 .semi-group{
+display:flex;
+flex-direction:column;
+gap:15px;
 
-margin:120px 0;
+margin:40px 0;
 
 position:relative;
-
 }
 
 /* FINAL */
@@ -617,7 +623,7 @@ right:-60px;
 top:50%;
 
 width:60px;
-height:120px;
+height:90px;
 
 border-top:3px solid #ffcc00;
 border-right:3px solid #ffcc00;
