@@ -468,7 +468,6 @@ margin-bottom:10px;
 /* ========================= */
 
 .tournament-bracket{
-
 display:grid;
 
 grid-template-columns:
@@ -477,10 +476,7 @@ grid-template-columns:
 220px
 220px;
 
-gap:80px;
-align-items:center;
-justify-content:center;
-
+gap:45px;
 }
 
 .round{
@@ -586,33 +582,57 @@ position:relative;
 position:relative;
 }
 
-/* Phoenix vs Dragon */
-
-/* QUARTER FINAL CONNECTOR */
-
-.quarter .match:nth-child(2)::after,
-.quarter .match:nth-child(4)::after,
-.quarter .match:nth-child(6)::after,
-.quarter .match:nth-child(8)::after{
-
+/* QF 1 */
+.quarter .match:nth-child(2)::after{
 content:"";
 position:absolute;
-
-right:-105px;
+right:-70px;
 top:50%;
 
-width:105px;
-height:140px;
+width:70px;
+height:3px;
 
-border-top:4px solid #ffcc00;
-border-right:4px solid #ffcc00;
-border-bottom:4px solid #ffcc00;
-
-border-radius:0 18px 18px 0;
-
-transform:translateY(-50%);
+background:#ffcc00;
 }
-/* Inferno vs Thunder */
+
+/* QF 2 */
+.quarter .match:nth-child(4)::after{
+content:"";
+position:absolute;
+right:-70px;
+top:50%;
+
+width:70px;
+height:3px;
+
+background:#ffcc00;
+}
+
+/* QF 3 */
+.quarter .match:nth-child(6)::after{
+content:"";
+position:absolute;
+right:-70px;
+top:50%;
+
+width:70px;
+height:3px;
+
+background:#ffcc00;
+}
+
+/* QF 4 */
+.quarter .match:nth-child(8)::after{
+content:"";
+position:absolute;
+right:-70px;
+top:50%;
+
+width:70px;
+height:3px;
+
+background:#ffcc00;
+}
 
 /* ========================= */
 /* CONNECTOR SF -> FINAL */
@@ -628,10 +648,10 @@ content:"";
 
 position:absolute;
 
-right:-60px;
+right:-45px;
 top:50%;
 
-width:60px;
+width:45px;
 height:90px;
 
 border-top:3px solid #ffcc00;
