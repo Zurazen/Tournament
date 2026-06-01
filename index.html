@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>RED GOLD CHAMPIONSHIP</title>
+<title>Red Gold Championship</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -14,178 +15,114 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 </head>
 
 <body>
 
-<!-- HERO -->
+<!-- BACKGROUND EFFECT -->
 
-<header class="hero">
+<div class="bg-blur blur-1"></div>
+<div class="bg-blur blur-2"></div>
 
-<div class="overlay"></div>
+<!-- NAVBAR -->
 
 <nav class="navbar">
 
 <div class="logo">
 <i class="fas fa-trophy"></i>
-<span>RED GOLD CUP</span>
+<span>RED GOLD CHAMPIONSHIP</span>
 </div>
 
 <ul>
-<li><a href="#teams">Tim</a></li>
-<li><a href="#schedule">Jadwal</a></li>
-<li><a href="#results">Hasil</a></li>
-<li><a href="#bracket">Bracket</a></li>
-<li><a href="#contact">Kontak</a></li>
+
+<li><a href="#overview">Overview</a></li>
+<li><a href="#group">Group Stage</a></li>
+<li><a href="#playoff">Playoff</a></li>
+<li><a href="#teams">Teams</a></li>
+<li><a href="#schedule">Schedule</a></li>
+
 </ul>
 
 </nav>
 
-<div class="hero-content">
+<!-- HERO -->
 
-<h1>RED GOLD CHAMPIONSHIP 2026</h1>
+<section class="hero">
+
+<div class="hero-left">
+
+<span class="badge">
+SEASON 2026
+</span>
+
+<h1>
+THE ULTIMATE
+ESPORTS TOURNAMENT
+</h1>
 
 <p>
-Turnamen Esports Terbesar Tahun Ini.
-Bersaing menjadi yang terbaik dan rebut gelar juara.
+Bersaing bersama tim terbaik dan rebut gelar juara
+Red Gold Championship.
 </p>
 
-<div id="countdown">
+<div class="hero-buttons">
 
-<div>
-<span id="days">00</span>
-<p>Hari</p>
-</div>
+<a href="#group" class="btn-gold">
+Standings
+</a>
 
-<div>
-<span id="hours">00</span>
-<p>Jam</p>
-</div>
-
-<div>
-<span id="minutes">00</span>
-<p>Menit</p>
-</div>
-
-<div>
-<span id="seconds">00</span>
-<p>Detik</p>
-</div>
-
-</div>
-
-<a href="#teams" class="btn">
-Lihat Peserta
+<a href="#playoff" class="btn-outline">
+View Bracket
 </a>
 
 </div>
 
-</header>
-
-<!-- INFO -->
-
-<section class="info">
-
-<div class="info-card">
-<i class="fas fa-gamepad"></i>
-<h3>Mobile Legends</h3>
 </div>
 
-<div class="info-card">
-<i class="fas fa-calendar"></i>
-<h3>15 Juni 2026</h3>
-</div>
+<div class="hero-right">
 
-<div class="info-card">
-<i class="fas fa-coins"></i>
-<h3>Prize Pool Rp 2.000.000</h3>
-</div>
+<div class="hero-card">
 
-</section>
+<h3>Prize Pool</h3>
 
-<!-- TEAMS -->
+<h2>Rp 2.000.000</h2>
 
-<section id="teams" class="section">
+<p>
+Grand Champion Reward
+</p>
 
-<h2 class="section-title">
-Daftar Tim
-</h2>
-
-<div class="team-grid">
-
-<div class="team-card">
-<h3>Team Phoenix</h3>
-<p>Captain: Raka</p>
-<p>WA: 0812-1111-1111</p>
-</div>
-
-<div class="team-card">
-<h3>Team Dragon</h3>
-<p>Captain: Fajar</p>
-<p>WA: 0812-2222-2222</p>
-</div>
-
-<div class="team-card">
-<h3>Team Titan</h3>
-<p>Captain: Dimas</p>
-<p>WA: 0812-3333-3333</p>
-</div>
-
-<div class="team-card">
-<h3>Team Shadow</h3>
-<p>Captain: Rizky</p>
-<p>WA: 0812-4444-4444</p>
-</div>
-
-<div class="team-card">
-<h3>Team Inferno</h3>
-<p>Captain: Arya</p>
-<p>WA: 0812-5555-5555</p>
-</div>
-
-<div class="team-card">
-<h3>Team Thunder</h3>
-<p>Captain: Kevin</p>
-<p>WA: 0812-6666-6666</p>
-</div>
-
-<div class="team-card">
-<h3>Team Valkyrie</h3>
-<p>Captain: Bagas</p>
-<p>WA: 0812-7777-7777</p>
-</div>
-
-<div class="team-card">
-<h3>Team Omega</h3>
-<p>Captain: Reza</p>
-<p>WA: 0812-8888-8888</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- SCHEDULE -->
+<!-- OVERVIEW -->
 
-<section id="schedule" class="section dark">
+<section id="overview" class="dashboard">
 
-<h2 class="section-title">
-Jadwal Pertandingan
-</h2>
+<!-- STANDINGS -->
 
-<div class="table-wrapper">
+<div class="card standings">
+
+<div class="card-header">
+<h2>Group Stage</h2>
+</div>
 
 <table>
 
 <thead>
+
 <tr>
-<th>Match</th>
-<th>Tim A</th>
-<th>Tim B</th>
-<th>Jam</th>
+<th>#</th>
+<th>Team</th>
+<th>W</th>
+<th>L</th>
+<th>Pts</th>
 </tr>
+
 </thead>
 
 <tbody>
@@ -193,29 +130,65 @@ Jadwal Pertandingan
 <tr>
 <td>1</td>
 <td>Phoenix</td>
-<td>Dragon</td>
-<td>19:00</td>
+<td>6</td>
+<td>0</td>
+<td>18</td>
 </tr>
 
 <tr>
 <td>2</td>
-<td>Titan</td>
-<td>Shadow</td>
-<td>20:00</td>
+<td>Inferno</td>
+<td>5</td>
+<td>1</td>
+<td>15</td>
 </tr>
 
 <tr>
 <td>3</td>
-<td>Inferno</td>
-<td>Thunder</td>
-<td>21:00</td>
+<td>Titan</td>
+<td>4</td>
+<td>2</td>
+<td>12</td>
 </tr>
 
 <tr>
 <td>4</td>
 <td>Valkyrie</td>
+<td>3</td>
+<td>3</td>
+<td>9</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>Dragon</td>
+<td>2</td>
+<td>4</td>
+<td>6</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>Shadow</td>
+<td>2</td>
+<td>4</td>
+<td>6</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>Thunder</td>
+<td>1</td>
+<td>5</td>
+<td>3</td>
+</tr>
+
+<tr>
+<td>8</td>
 <td>Omega</td>
-<td>22:00</td>
+<td>1</td>
+<td>5</td>
+<td>3</td>
 </tr>
 
 </tbody>
@@ -224,98 +197,203 @@ Jadwal Pertandingan
 
 </div>
 
+<!-- NEXT MATCH -->
+
+<div class="card next-match">
+
+<div class="card-header">
+<h2>Next Match</h2>
+</div>
+
+<div class="versus">
+
+<div class="team">
+
+<div class="team-logo">
+P
+</div>
+
+<h3>Phoenix</h3>
+
+</div>
+
+<span>VS</span>
+
+<div class="team">
+
+<div class="team-logo">
+I
+</div>
+
+<h3>Inferno</h3>
+
+</div>
+
+</div>
+
+<p class="match-time">
+15 Juni 2026 • 20:00 WIB
+</p>
+
+</div>
+
+<!-- COUNTDOWN -->
+
+<div class="card countdown-card">
+
+<div class="card-header">
+<h2>Grand Final</h2>
+</div>
+
+<div id="countdown">
+
+<div>
+<span id="days">00</span>
+<p>Days</p>
+</div>
+
+<div>
+<span id="hours">00</span>
+<p>Hours</p>
+</div>
+
+<div>
+<span id="minutes">00</span>
+<p>Minutes</p>
+</div>
+
+<div>
+<span id="seconds">00</span>
+<p>Seconds</p>
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- RESULTS -->
+<!-- PLAYOFF -->
 
-<section id="results" class="section">
+<section id="playoff" class="section">
 
-<h2 class="section-title">
-Hasil Pertandingan
-</h2>
+<div class="section-title">
 
-<div class="results-grid">
+<h2>Playoff Bracket</h2>
 
-<div class="result-card">
-<h3>Phoenix vs Dragon</h3>
-<span>2 - 0</span>
-</div>
-
-<div class="result-card">
-<h3>Titan vs Shadow</h3>
-<span>2 - 1</span>
-</div>
-
-<div class="result-card">
-<h3>Inferno vs Thunder</h3>
-<span>2 - 0</span>
-</div>
-
-<div class="result-card">
-<h3>Valkyrie vs Omega</h3>
-<span>2 - 1</span>
-</div>
+<p>
+Top 4 teams advance to playoff stage
+</p>
 
 </div>
 
-</section>
+<div class="bracket-container">
 
-<!-- BRACKET -->
-
-<section id="bracket" class="section dark">
-
-<h2 class="section-title">
-Tournament Bracket
-</h2>
-
-<div class="bracket">
+<!-- QUARTER -->
 
 <div class="round">
 
 <h3>Quarter Final</h3>
 
-<div class="match">Phoenix</div>
-<div class="match">Dragon</div>
+<div class="match-box">
+<span>Phoenix</span>
+<span>2</span>
+</div>
 
-<div class="match">Titan</div>
-<div class="match">Shadow</div>
+<div class="match-box">
+<span>Dragon</span>
+<span>0</span>
+</div>
 
-<div class="match">Inferno</div>
-<div class="match">Thunder</div>
+<div class="match-box">
+<span>Titan</span>
+<span>2</span>
+</div>
 
-<div class="match">Valkyrie</div>
-<div class="match">Omega</div>
+<div class="match-box">
+<span>Shadow</span>
+<span>1</span>
+</div>
+
+<div class="match-box">
+<span>Inferno</span>
+<span>2</span>
+</div>
+
+<div class="match-box">
+<span>Thunder</span>
+<span>0</span>
+</div>
+
+<div class="match-box">
+<span>Valkyrie</span>
+<span>2</span>
+</div>
+
+<div class="match-box">
+<span>Omega</span>
+<span>1</span>
+</div>
 
 </div>
+
+<!-- SEMI -->
 
 <div class="round">
 
 <h3>Semi Final</h3>
 
-<div class="match">Phoenix</div>
-<div class="match">Titan</div>
+<div class="match-box winner">
+<span>Phoenix</span>
+<span>2</span>
+</div>
 
-<div class="match">Inferno</div>
-<div class="match">Valkyrie</div>
+<div class="match-box">
+<span>Titan</span>
+<span>1</span>
+</div>
+
+<div class="match-box winner">
+<span>Inferno</span>
+<span>2</span>
+</div>
+
+<div class="match-box">
+<span>Valkyrie</span>
+<span>0</span>
+</div>
 
 </div>
+
+<!-- FINAL -->
 
 <div class="round">
 
-<h3>Final</h3>
+<h3>Grand Final</h3>
 
-<div class="match">Phoenix</div>
-<div class="match">Inferno</div>
+<div class="match-box winner">
+<span>Phoenix</span>
+<span>3</span>
+</div>
+
+<div class="match-box">
+<span>Inferno</span>
+<span>2</span>
+</div>
 
 </div>
 
-<div class="round champion">
+<!-- CHAMPION -->
+
+<div class="champion-card">
+
+<i class="fas fa-trophy"></i>
 
 <h3>Champion</h3>
 
-<div class="winner">
-🏆 Phoenix
-</div>
+<h2>Phoenix</h2>
+
+<p>MVP : Raka</p>
 
 </div>
 
@@ -323,30 +401,58 @@ Tournament Bracket
 
 </section>
 
-<!-- CONTACT -->
+<!-- TEAMS -->
 
-<section id="contact" class="section">
+<section id="teams" class="section">
 
-<h2 class="section-title">
-Kontak Panitia
-</h2>
+<div class="section-title">
+<h2>Participants</h2>
+</div>
 
-<div class="contact-box">
+<div class="team-grid">
 
-<a href="#">
-<i class="fab fa-whatsapp"></i>
-0812-9999-9999
-</a>
+<div class="team-card">Phoenix</div>
+<div class="team-card">Inferno</div>
+<div class="team-card">Titan</div>
+<div class="team-card">Valkyrie</div>
+<div class="team-card">Dragon</div>
+<div class="team-card">Shadow</div>
+<div class="team-card">Thunder</div>
+<div class="team-card">Omega</div>
 
-<a href="#">
-<i class="fab fa-discord"></i>
-Discord Server
-</a>
+</div>
 
-<a href="#">
-<i class="fab fa-instagram"></i>
-@redgoldcup
-</a>
+</section>
+
+<!-- SCHEDULE -->
+
+<section id="schedule" class="section">
+
+<div class="section-title">
+<h2>Match Schedule</h2>
+</div>
+
+<div class="schedule-grid">
+
+<div class="schedule-card">
+Phoenix vs Dragon
+<span>19:00 WIB</span>
+</div>
+
+<div class="schedule-card">
+Titan vs Shadow
+<span>20:00 WIB</span>
+</div>
+
+<div class="schedule-card">
+Inferno vs Thunder
+<span>21:00 WIB</span>
+</div>
+
+<div class="schedule-card">
+Valkyrie vs Omega
+<span>22:00 WIB</span>
+</div>
 
 </div>
 
@@ -355,8 +461,7 @@ Discord Server
 <footer>
 
 <p>
-© 2026 Red Gold Championship.
-All Rights Reserved.
+© 2026 Red Gold Championship
 </p>
 
 </footer>
