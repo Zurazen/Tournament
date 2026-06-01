@@ -752,3 +752,81 @@ color:#ffcc00;
 font-weight:700;
 
 }
+
+.champion-card{
+
+height:100%;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+background:
+linear-gradient(
+135deg,
+rgba(255,204,0,.15),
+rgba(255,0,0,.08)
+);
+
+}
+
+.trophy{
+
+font-size:6rem;
+margin-bottom:20px;
+
+animation:float 3s infinite;
+
+}
+
+.record{
+
+margin-top:15px;
+
+padding:10px 20px;
+
+border-radius:999px;
+
+background:#111;
+
+color:#ffcc00;
+
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+tbody tr:nth-child(1){
+
+background:
+rgba(255,204,0,.12);
+
+}
+
+tbody tr:nth-child(2){
+
+background:
+rgba(255,204,0,.08);
+
+}
+
+tbody tr:nth-child(3){
+
+background:
+rgba(255,204,0,.04);
+
+}
