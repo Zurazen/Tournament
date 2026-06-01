@@ -1,280 +1,339 @@
-// ======================
-// COUNTDOWN TOURNAMENT
-// ======================
+// =============================
+// RED GOLD CHAMPIONSHIP V2
+// =============================
 
-const tournamentDate = new Date("June 15, 2026 19:00:00").getTime();
+// COUNTDOWN GRAND FINAL
 
-const countdown = setInterval(() => {
+const targetDate =
+new Date("2026-06-15T20:00:00").getTime();
 
-    const now = new Date().getTime();
-    const distance = tournamentDate - now;
+const days =
+document.getElementById("days");
 
-    if (distance <= 0) {
+const hours =
+document.getElementById("hours");
 
-        clearInterval(countdown);
+const minutes =
+document.getElementById("minutes");
 
-        document.getElementById("days").innerHTML = "00";
-        document.getElementById("hours").innerHTML = "00";
-        document.getElementById("minutes").innerHTML = "00";
-        document.getElementById("seconds").innerHTML = "00";
+const seconds =
+document.getElementById("seconds");
 
-        return;
-    }
+function updateCountdown(){
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+const now = new Date().getTime();
 
-    const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24))
-        / (1000 * 60 * 60)
-    );
+const distance = targetDate - now;
 
-    const minutes = Math.floor(
-        (distance % (1000 * 60 * 60))
-        / (1000 * 60)
-    );
+if(distance <= 0){
 
-    const seconds = Math.floor(
-        (distance % (1000 * 60))
-        / 1000
-    );
+days.innerHTML = "00";
+hours.innerHTML = "00";
+minutes.innerHTML = "00";
+seconds.innerHTML = "00";
 
-    document.getElementById("days").innerHTML =
-        String(days).padStart(2, "0");
+return;
+}
 
-    document.getElementById("hours").innerHTML =
-        String(hours).padStart(2, "0");
+const d =
+Math.floor(distance / (1000*60*60*24));
 
-    document.getElementById("minutes").innerHTML =
-        String(minutes).padStart(2, "0");
-
-    document.getElementById("seconds").innerHTML =
-        String(seconds).padStart(2, "0");
-
-}, 1000);
-
-
-// ======================
-// SCROLL ANIMATION
-// ======================
-
-const observer = new IntersectionObserver((entries) => {
-
-    entries.forEach(entry => {
-
-        if (entry.isIntersecting) {
-
-            entry.target.classList.add("show");
-
-        }
-
-    });
-
-}, {
-    threshold: 0.15
-});
-
-
-const hiddenElements = document.querySelectorAll(
-    ".team-card, .result-card, .info-card, .round"
+const h =
+Math.floor(
+(distance % (1000*60*60*24))
+/
+(1000*60*60)
 );
 
-hiddenElements.forEach(el => {
+const m =
+Math.floor(
+(distance % (1000*60*60))
+/
+(1000*60)
+);
 
-    el.classList.add("hidden");
-    observer.observe(el);
+const s =
+Math.floor(
+(distance % (1000*60))
+/
+1000
+);
 
-});
+days.innerHTML =
+String(d).padStart(2,"0");
 
+hours.innerHTML =
+String(h).padStart(2,"0");
 
-// ======================
-// NAVBAR SCROLL EFFECT
-// ======================
+minutes.innerHTML =
+String(m).padStart(2,"0");
 
-const navbar = document.querySelector(".navbar");
-
-window.addEventListener("scroll", () => {
-
-    if (window.scrollY > 50) {
-
-        navbar.style.background = "rgba(0,0,0,.9)";
-        navbar.style.backdropFilter = "blur(10px)";
-        navbar.style.padding = "18px 8%";
-        navbar.style.boxShadow =
-            "0 5px 25px rgba(255,215,0,.15)";
-
-    } else {
-
-        navbar.style.background = "transparent";
-        navbar.style.backdropFilter = "none";
-        navbar.style.padding = "25px 8%";
-        navbar.style.boxShadow = "none";
-
-    }
-
-});
-
-
-// ======================
-// SMOOTH ACTIVE MENU
-// ======================
-
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".navbar a");
-
-window.addEventListener("scroll", () => {
-
-    let current = "";
-
-    sections.forEach(section => {
-
-        const sectionTop = section.offsetTop - 150;
-        const sectionHeight = section.clientHeight;
-
-        if (pageYOffset >= sectionTop) {
-            current = section.getAttribute("id");
-        }
-
-    });
-
-    navLinks.forEach(link => {
-
-        link.classList.remove("active");
-
-        if (
-            link.getAttribute("href") === `#${current}`
-        ) {
-            link.classList.add("active");
-        }
-
-    });
-
-});
-
-
-// ======================
-// MATCH HIGHLIGHT
-// ======================
-
-const rows = document.querySelectorAll("tbody tr");
-
-rows.forEach((row, index) => {
-
-    setTimeout(() => {
-
-        row.style.transition = ".5s";
-        row.style.boxShadow =
-            "0 0 20px rgba(255,215,0,.25)";
-
-        setTimeout(() => {
-
-            row.style.boxShadow = "none";
-
-        }, 2000);
-
-    }, index * 600);
-
-});
-
-
-// ======================
-// GOLD PARTICLES
-// ======================
-
-function createParticle() {
-
-    const particle = document.createElement("span");
-
-    particle.classList.add("particle");
-
-    particle.style.left =
-        Math.random() * window.innerWidth + "px";
-
-    particle.style.animationDuration =
-        Math.random() * 3 + 3 + "s";
-
-    particle.style.opacity =
-        Math.random();
-
-    document.body.appendChild(particle);
-
-    setTimeout(() => {
-
-        particle.remove();
-
-    }, 6000);
+seconds.innerHTML =
+String(s).padStart(2,"0");
 
 }
 
-setInterval(createParticle, 500);
+updateCountdown();
+
+setInterval(updateCountdown,1000);
 
 
-// ======================
-// HERO TEXT ANIMATION
-// ======================
+// =============================
+// NAVBAR SCROLL EFFECT
+// =============================
 
-const heroTitle = document.querySelector(".hero-content h1");
+const navbar =
+document.querySelector(".navbar");
 
-heroTitle.style.opacity = "0";
-heroTitle.style.transform = "translateY(40px)";
+window.addEventListener("scroll",()=>{
 
-setTimeout(() => {
+if(window.scrollY > 50){
 
-    heroTitle.style.transition = "1s";
-    heroTitle.style.opacity = "1";
-    heroTitle.style.transform = "translateY(0px)";
+navbar.style.background =
+"rgba(0,0,0,.95)";
 
-}, 300);
+navbar.style.boxShadow =
+"0 10px 40px rgba(255,204,0,.08)";
 
+}else{
 
-// ======================
-// TEAM SEARCH
-// ======================
+navbar.style.background =
+"rgba(0,0,0,.7)";
 
-const teamCards =
-document.querySelectorAll(".team-card");
+navbar.style.boxShadow =
+"none";
 
-console.log(
-    "Tournament Loaded Successfully"
-);
-
-
-// ======================
-// PRELOADER FAKE
-// ======================
-
-window.addEventListener("load", () => {
-
-    document.body.classList.add("loaded");
+}
 
 });
 
 
-// ======================
-// CHAMPION GLOW EFFECT
-// ======================
+// =============================
+// SCROLL REVEAL
+// =============================
+
+const observer =
+new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+},{
+threshold:.15
+});
+
+const cards =
+document.querySelectorAll(
+".card,.team-card,.schedule-card,.round,.champion-card"
+);
+
+cards.forEach(card=>{
+
+card.classList.add("hidden");
+
+observer.observe(card);
+
+});
+
+
+// =============================
+// ACTIVE MENU
+// =============================
+
+const sections =
+document.querySelectorAll("section");
+
+const navLinks =
+document.querySelectorAll(".navbar a");
+
+window.addEventListener("scroll",()=>{
+
+let current = "";
+
+sections.forEach(section=>{
+
+const sectionTop =
+section.offsetTop - 150;
+
+if(window.scrollY >= sectionTop){
+
+current =
+section.getAttribute("id");
+
+}
+
+});
+
+navLinks.forEach(link=>{
+
+link.classList.remove("active");
+
+if(
+link.getAttribute("href")
+===
+`#${current}`
+){
+
+link.classList.add("active");
+
+}
+
+});
+
+});
+
+
+// =============================
+// HERO CARD FLOATING
+// =============================
+
+const heroCard =
+document.querySelector(".hero-card");
+
+if(heroCard){
+
+setInterval(()=>{
+
+heroCard.style.transform =
+"translateY(-8px)";
+
+setTimeout(()=>{
+
+heroCard.style.transform =
+"translateY(0px)";
+
+},1200);
+
+},2500);
+
+}
+
+
+// =============================
+// CHAMPION GLOW
+// =============================
 
 const champion =
-document.querySelector(".winner");
+document.querySelector(".champion-card");
 
-setInterval(() => {
+if(champion){
 
-    champion.style.transform = "scale(1.05)";
+setInterval(()=>{
 
-    setTimeout(() => {
+champion.style.boxShadow =
+"0 0 40px rgba(255,204,0,.25)";
 
-        champion.style.transform = "scale(1)";
+setTimeout(()=>{
 
-    }, 500);
+champion.style.boxShadow =
+"0 0 0 rgba(255,204,0,0)";
 
-}, 1500);
+},1000);
+
+},2000);
+
+}
 
 
-// ======================
-// CONSOLE MESSAGE
-// ======================
+// =============================
+// PARTICLES EFFECT
+// =============================
 
-console.log(`
-🏆 RED GOLD CHAMPIONSHIP
-🔥 Powered by GitHub Pages
-👑 Esports Tournament System
-`);
+function createParticle(){
+
+const particle =
+document.createElement("div");
+
+particle.classList.add("particle");
+
+particle.style.left =
+Math.random()*100+"vw";
+
+particle.style.animationDuration =
+(Math.random()*4+4)+"s";
+
+document.body.appendChild(particle);
+
+setTimeout(()=>{
+
+particle.remove();
+
+},8000);
+
+}
+
+setInterval(createParticle,400);
+
+
+// =============================
+// MATCH HOVER EFFECT
+// =============================
+
+const matches =
+document.querySelectorAll(".match-box");
+
+matches.forEach(match=>{
+
+match.addEventListener("mouseenter",()=>{
+
+match.style.transform =
+"translateX(8px)";
+
+});
+
+match.addEventListener("mouseleave",()=>{
+
+match.style.transform =
+"translateX(0px)";
+
+});
+
+});
+
+
+// =============================
+// TEAM CARD EFFECT
+// =============================
+
+const teams =
+document.querySelectorAll(".team-card");
+
+teams.forEach(team=>{
+
+team.addEventListener("mousemove",()=>{
+
+team.style.transform =
+"translateY(-10px) scale(1.03)";
+
+});
+
+team.addEventListener("mouseleave",()=>{
+
+team.style.transform =
+"translateY(0px) scale(1)";
+
+});
+
+});
+
+
+// =============================
+// LOADED
+// =============================
+
+window.addEventListener("load",()=>{
+
+document.body.classList.add("loaded");
+
+console.log(
+"🏆 RED GOLD CHAMPIONSHIP V2 LOADED"
+);
+
+});
