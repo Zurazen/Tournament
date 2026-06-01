@@ -637,33 +637,6 @@ transform:translateY(-50%);
 
 /* Inferno vs Thunder */
 
-/* QUARTER FINAL CONNECTOR */
-
-.quarter .match:nth-child(1)::after,
-.quarter .match:nth-child(3)::after,
-.quarter .match:nth-child(5)::after,
-.quarter .match:nth-child(7)::after{
-
-content:"";
-
-position:absolute;
-
-right:-105px;
-top:50%;
-
-width:105px;
-height:140px;
-
-border-top:4px solid #ffcc00;
-border-right:4px solid #ffcc00;
-border-bottom:4px solid #ffcc00;
-
-border-radius:0 18px 18px 0;
-
-transform:translateY(-50%);
-}
-
-
 /* ========================= */
 /* CONNECTOR SF -> FINAL */
 /* ========================= */
