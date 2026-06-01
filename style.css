@@ -270,16 +270,17 @@ color:var(--gold);
 
 .dashboard{
 
-padding:0 8% 100px;
-
 display:grid;
 
 grid-template-columns:
-2fr
+
+400px
 1fr
-1fr;
+320px;
 
 gap:25px;
+
+align-items:start;
 
 }
 
@@ -703,5 +704,51 @@ flex-wrap:wrap;
 justify-content:center;
 
 }
+
+}
+
+.top-banner{
+
+padding:40px 8%;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:30px;
+
+}
+
+.top-banner h1{
+
+font-size:2.8rem;
+color:#ffcc00;
+
+}
+
+.banner-right{
+
+display:flex;
+gap:15px;
+
+}
+
+.mini-card{
+
+background:#111;
+
+padding:20px;
+
+border-radius:15px;
+
+min-width:170px;
+
+border:1px solid rgba(255,204,0,.2);
+
+}
+
+.mini-card span{
+
+color:#ffcc00;
+font-weight:700;
 
 }
