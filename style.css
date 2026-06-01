@@ -477,7 +477,7 @@ grid-template-columns:
 220px
 220px;
 
-gap:20px;
+gap:50px;
 
 justify-content:center;
 
@@ -505,7 +505,7 @@ color:#ffcc00;
 
 .match{
 width:180px;
-height:55px;
+height:70px;
 line-height:55px;
 font-size:.9rem;
 
@@ -569,7 +569,7 @@ justify-content:center;
 
 .semi-group{
 
-margin:40px 0;
+margin:120px 0;
 
 position:relative;
 
